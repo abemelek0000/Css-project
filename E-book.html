@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Book</title>
+    <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
     <div class="intro">
@@ -31,7 +32,7 @@
     <section class="new-arrival">
         <div class="content">
             <div class="arrival-header">
-                <h2>New-arrivals</h2>
+                <h2 class="section-intro">New-arrivals</h2>
             </div>
          <ul class="arrival-list">
             <li class="arrived-book">
@@ -40,7 +41,7 @@
                     <span class="book-title">Atmosphere</span>
                     <span class="book-author"> Taylor Jenkins Reid</span>
                     <span class="book-Price">200 Birr</span>
-                    <button class="get-book">Get Book</button>
+                    <div class="book-button"><button class="get-book">Get Book</button></div>
                 </div>
             </li>
             <li class="arrived-book">
@@ -77,24 +78,24 @@
     <section class="categories">
         <div class="content">
             <div class="categories-header">
-                <h2>Categories</h2>
+                <h2 class="section-intro">Categories</h2>
                 <div class="categories-list">
                     <ul class="C-list">
                         <li class="category">
                             <img src="image/history_2234697 (1).png" alt="icon">
-                            <h3 class="category-title">History</h3>
+                            <button class="category-title">History</button>
                         </li>
                         <li class="category">
                             <img src="image/biography.png" alt="icon">
-                            <h3 class="category-title">Biography</h3>
+                            <button class="category-title">Biography</button>
                         </li>
                         <li class="category">
                             <img src="image/rose_6385380.png" alt="icon">
-                            <h3 class="category-title">Romance</h3>
+                            <button class="category-title">Romance</button>
                         </li>
                         <li class="category">
                             <img src="image/science-fiction_5146483.png" alt="icon">
-                            <h3 class="category-title">Science Fiction</h3>
+                            <button class="category-title">Science Fiction</button>
                         </li>
                     </ul>
                 </div>
@@ -104,12 +105,30 @@
     <section class="book-review">
         <div class="content">
             <div class="review-header">
-                <h3>Book Reviews</h3>
+                <h2 class="section-intro">Book Reviews</h2>
                 <p>Words on our books</p>
             </div>
+
+<!-- Slider Container -->
+        <div class="slider-container">
+            <!-- Navigation Buttons -->
+            <button class="slider-btn prev-btn" aria-label="Previous review">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+            
+            <button class="slider-btn next-btn" aria-label="Next review">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </button>
+            
+            <!-- Review List as Slider -->
+
             <ul class="review-list">
                 <li class="review">
-                    <div class="review-content">
+                    
                         <div class="review-left">
                             <img src="image/Atomic-Habits-An.jpg">
                         </div>
@@ -121,10 +140,10 @@
                                 <span class="author-role">Author of "Ego IS THE ENEMY"</span>
                             </div>
                         </div>
-                    </div>
+                    
                 </li>
                 <li class="review">
-                    <div class="review-content">
+                    
                         <div class="review-left">
                             <img src="image/12 rules for life.jpg">
                         </div>
@@ -136,26 +155,34 @@
                                 <span class="author-role">The Times</span>
                             </div>
                         </div>
-                    </div>
+                    
                 </li>
             </ul>
+
+<!-- Slide Indicators -->
+            <div class="slider-indicators">
+                <button class="indicator active" aria-label="Go to slide 1"></button>
+                <button class="indicator" aria-label="Go to slide 2"></button>
+                <button class="indicator" aria-label="Go to slide 3"></button>
+            </div>
+
         </div>
     </section>
-    <section class="partners">
+    <section class="partners">                                                                                                      
         <div class="content">
             <h3 class="partner-header">Trusted By</h3>
             <ul class="partner-list">
                 <li class="partner-item">
-                    <img src="image/teraki.png" alt="teraki-logo">
-                    <span class="partner-name">TERAKI</span>
+                   <div> <img src="image/teraki.png" alt="teraki-logo"></div>
+                    <div><p class="partner-name">TERAKI</p></div>
                 </li>
                 <li class="partner-item">
-                    <img src="image/chapa.png" alt="chapa-logo">
-                    <span class="partner-name">CHAPA</span>
+                    <div><img src="image/chapa.png" alt="chapa-logo"></div>
+                    <div><p class="partner-name">CHAPA</p></div>
                 </li>
                 <li class="partner-item">
-                    <img src="image/Semu.jpg" alt="semu-logo">
-                    <span class="partner-name">SEMU AUDIOBOOKS</span>
+                   <div> <img src="image/Semu.jpg" alt="semu-logo"></div>
+                  <div>  <p class="partner-name">SEMU AUDIOBOOKS</p></div>
                 </li>
             </ul>
         </div>
