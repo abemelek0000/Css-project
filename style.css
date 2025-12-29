@@ -8,6 +8,9 @@
         font-family: "geom",sans-serif;
     font-style: normal;
 }
+html{
+    scroll-behavior:smooth;
+}
 :root{
     --bg-color: #bea08f;
     --gray-color:#364038;
@@ -120,7 +123,11 @@ header h1{
 
 }
 section{
-    padding: 6.5em 3.5em;
+    padding: 2em 1em;
+    margin: 0.5em;
+}
+.arrival-list{
+    margin: 0.5em;
 }
 .section-intro{
     font-size: 2.5em;
@@ -171,12 +178,18 @@ section{
    font-weight: 500;
    margin-top: .5em;
 }
+.categories-list{
+    padding: 1em;
+    padding-bottom: 1em;
+    margin: 0.5em;
+}
 .categories ul.C-list{
     flex: 1;
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr ;
     gap: 4em;
+    
 }
 .categories .category{
     background-color: white;
@@ -290,7 +303,7 @@ width: 60%;
 }
 footer{
     background-color: var(--bg-color);
-    padding: 5em 2.5em;
+    padding: 1em 2.5em;
     padding-bottom: 2em;
 }
 footer .content{
@@ -330,12 +343,12 @@ footer*{
     from {
         opacity: 0.5;
         scale: 0.5;
-        /* transform: translateY(20px); */
+        
     }
     to {
         opacity: 1;
         scale: 1;
-        /* transform: translateY(0); */
+        
     }
 }
 
