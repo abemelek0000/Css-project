@@ -20,7 +20,7 @@
             <div class="left">
                 <h2> A world of reading <br> awaits you</h2>
                 <p> Read anywhere, anytime, on any device</p>
-                <button>Order Now</button>
+                <button id="orderNowBtn">Order Now</button>
              </div>
              <div class="right">
                 <img src="image/flowers-7660120_1280.jpg"
@@ -30,13 +30,44 @@
         </div>
     </div>
 
-    <section class="new-arrival">
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img id="modalBookImage" src="" alt="Book Image">
+                <div class="modal-book-info">
+                    <h3 id="modalBookTitle"></h3>
+                    <p id="modalBookAuthor"></p>
+                    <p id="modalBookPrice"></p>
+                    <p id="modalBookDescription"></p>
+                    <button id="addToCartBtn">Add to Cart</button>
+                    <button id="buyNowBtn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <span class="close-cart">&times;</span>
+        </div>
+        <div class="cart-items">
+           
+        </div>
+        <div class="cart-total">
+            <p>Total: <span id="cartTotal">0</span> Birr</p>
+            <button id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+    
+    <section class="new-arrival" id="NewArrival">
         <div class="content">
             <div class="arrival-header">
                 <h2 class="section-intro">New-arrivals</h2>
             </div>
          <ul class="arrival-list">
-            <li class="arrived-book">
+            <li class="arrived-book" data-book='{"title":"Atmosphere","author":"Taylor Jenkins Reid","price":900,"description":"A captivating novel about fame, fortune, and the price of success."}'>
                 <img src="image/Atmosphere.jpg" alt="Atmosphere">
                 <div class="book-info">
                     <span class="book-in">Atmosphere</span>
@@ -45,7 +76,7 @@
                     <div class="book-button"><button class="get-book">Get Book</button></div>
                 </div>
             </li>
-            <li class="arrived-book">
+            <li class="arrived-book" data-book='{"title":"Poems & Prayers","author":"Matthew McConaughey","price":1000,"description":"A collection of inspirational poems and prayers."}'>
                 <img src="image/poems&prayers.jpg" alt="poems&prayers">
                 <div class="book-info">
                     <span class="book-in">Poems & Prayers</span>
@@ -54,7 +85,7 @@
                     <button class="get-book">Get Book</button>
                 </div>
             </li>
-            <li class="arrived-book">
+            <li class="arrived-book" data-book='{"title":"The Intruder","author":"Freida Mcfadden","price":600,"description":"A thrilling mystery novel full of suspense."}'>
                 <img src="image/The Intruder.jpg" alt="The Intruder">
                 <div class="book-info">
                     <span class="book-in">The Intruder</span>
@@ -63,7 +94,7 @@
                     <button class="get-book">Get Book</button>
                 </div>
             </li>
-            <li class="arrived-book">
+            <li class="arrived-book" data-book='{"title":"The Bewitching","author":"Silvia Moreno-Garcia","price":700,"description":"A magical tale of love and witchcraft."}'>
                 <img src="image/The Bewitching.jpg" alt="The Bewitching">
                 <div class="book-info">
                     <span class="book-in">The Bewitching</span>
@@ -84,26 +115,26 @@
                     <ul class="C-list">
                         <li class="category">
                             <div><img src="image/history_2234697 (1).png" alt="icon"></div>
-                           <div><button class="category-title">History</button></div>
+                           <div><button class="category-title" data-category="history">History</button></div>
                         </li>
                         <li class="category">
                            <div> <img src="image/biography.png" alt="icon"></div>
-                           <div> <button class="category-title">Biography</button></div>
+                           <div> <button class="category-title" data-category="biography">Biography</button></div>
                         </li>
                         <li class="category">
                            <div> <img src="image/rose_6385380.png" alt="icon"></div>
-                           <div> <button class="category-title">Romance</button></div>
+                           <div> <button class="category-title" data-category="romance">Romance</button></div>
                         </li>
                         <li class="category">
                            <div> <img src="image/science-fiction_5146483.png" alt="icon"></div>
-                            <div><button class="category-title">Science Fiction</button></div>
+                            <div><button class="category-title"  data-category="science-fiction">Science Fiction</button></div>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-    <section class="book-review">
+    <section class="book-review" id="bookReview">
         <div class="content">
             <div class="review-header">
                 <h2 class="section-intro">Book Reviews</h2>
@@ -198,5 +229,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
